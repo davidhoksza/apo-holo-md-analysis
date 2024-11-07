@@ -35,7 +35,7 @@ def main(args):
         i1 = min(i+window, cnt_apo)
         j = 0
         while j < cnt_holo:
-            j1 = min(i+window, cnt_apo)
+            j1 = min(j+window, cnt_holo)
             f.write(
                 ('qsub -l select=1:ncpus=1:mem=6gb:scratch_local=10gb -l walltime=01:00:00 -v "'
                  f'apo_gro={PATH.APO_GRO},'
@@ -47,6 +47,7 @@ def main(args):
                  f'holo_trj={PATH.HOLO_TRJ},'
                  f'holo_ndx={PATH.HOLO_IX},'
                  f'holo_ix_range={j}-{j1},'
+                 f'blosum={PROJECTDIR}/BLOSUM62,'
                  f'output={PATH_OUT}rmsd_{i}-{i1}_{j}-{j1}'
                  '" job.sh\n')
                 )

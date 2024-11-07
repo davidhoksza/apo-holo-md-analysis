@@ -12,4 +12,5 @@ python ${PROJECTDIR}apo-holo-trj-comp.py \
     --holo-trj $holo_trj \
     --holo-ndx $holo_ndx \
     --holo-ix-range $holo_ix_range \
+    --blosum $blosum \
     --output $output

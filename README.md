@@ -18,14 +18,15 @@ The `apo-holo-trj-comp` contains code to obtain all-to-all pocket RMSD distances
 The following scripts are here just as an example to c&p when prototyping.
 ```
 python .\apo-holo-trj-comp.py `
-    --apo-gro c:/git/apo-holo-md-analysis/data/apo-holo-trj-comp/G01/apo_2FJY/conf_wh20.gro `
-    --apo-trj c:/git/apo-holo-md-analysis/data/apo-holo-trj-comp/G01/apo_2FJY/traj_350ns_w_protein.xtc `
-    --apo-ndx c:/git/apo-holo-md-analysis/data/apo-holo-trj-comp/G01/apo_2FJY/index.ndx `
+    --apo-gro c:/git/apo-holo-md-analysis/apo-holo-trj-comp/data/G01/apo_2FJY/conf_wh20.gro `
+    --apo-trj c:/git/apo-holo-md-analysis/apo-holo-trj-comp/data/G01/apo_2FJY/traj_350ns_w_protein.xtc `
+    --apo-ndx c:/git/apo-holo-md-analysis/apo-holo-trj-comp/data/G01/apo_2FJY/index.ndx `
     --apo-ix-range 0-20 `
-    --holo-gro c:/git/apo-holo-md-analysis/data/apo-holo-trj-comp/G01/holo_2P70/conf_wh20.gro `
-    --holo-trj c:/git/apo-holo-md-analysis/data/apo-holo-trj-comp/G01/holo_2P70/traj_350ns_w_protein.xtc `
-    --holo-ndx c:/git/apo-holo-md-analysis/data/apo-holo-trj-comp/G01/holo_2P70/index.ndx `
+    --holo-gro c:/git/apo-holo-md-analysis/apo-holo-trj-comp/data/G01/holo_2P70/conf_wh20.gro `
+    --holo-trj c:/git/apo-holo-md-analysis/apo-holo-trj-comp/data/G01/holo_2P70/traj_350ns_w_protein.xtc `
+    --holo-ndx c:/git/apo-holo-md-analysis/apo-holo-trj-comp/data/G01/holo_2P70/index.ndx `
     --holo-ix-range 0-20 `
+    --blosum BLOSUM62 `
     --output rmsd_0_20.npy
 ```
 

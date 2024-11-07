@@ -24,7 +24,7 @@ def main(args):
     cmd.load(PATH.HOLO_GRO, 'trj-holo')
     cmd.load_traj(PATH.HOLO_TRJ, 'trj-holo')
 
-    cmd.align(mobile='trj-holo', target='trj-apo', mobile_state=1, target_state=1, cycles=10, matrix='BLOSUM62') #the matrix parameter is here because PyMOL module on MetaCentrum has wrong mappings and can't loacate the blossum matrix; in this way, it uses the one provided in the local directory
+    cmd.align(mobile='trj-holo', target='trj-apo', mobile_state=1, target_state=1, cycles=10, matrix=args.blosum) #the matrix parameter is here because PyMOL module on MetaCentrum has wrong mappings and can't loacate the blossum matrix; in this way, it uses the one provided in the local directory
     cmd.intra_fit('trj-apo')
     cmd.intra_fit('trj-holo')
 
@@ -85,6 +85,8 @@ if __name__ == "__main__":
     parser.add_argument("--holo-gro", type=str, help="Gromac file of holo structure")
     parser.add_argument("--holo-ndx", type=str, help="Index file of holo structure")
     parser.add_argument("--holo-ix-range", type=str, help="Range of frames to process. The format needs to be: ix_from-ix_to")
+
+    parser.add_argument("--blosum", type=str, help="Path to blossum matrix to be used when superposing")
 
     parser.add_argument("--output", type=str, help="Path to the output npy file containing a matrix of dimension (apo-ix-range[1]-apo-ix-range[0], holo-ix-range[1]-holo-ix-range[0])")
     
