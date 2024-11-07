@@ -60,14 +60,16 @@ def main(args):
     rmsd_apo_holo = np.empty(shape=(range_apo[1]-range_apo[0], range_holo[1]-range_holo[0]))
 
     for i in range(len(pocket_trj_apo)):
-        i_real = range_apo[0] + i
+        #i_real = range_apo[0] + i
         for j in range(i, len(pocket_trj_holo)):
-            j_real = range_holo[0] + j
+            #j_real = range_holo[0] + j
 
             aux = pocket_trj_apo[i].rmsd(pocket_trj_holo[j])
 
-            rmsd_apo_holo[i_real,j_real] = aux
-            rmsd_apo_holo[j_real,i_real] = aux
+            # rmsd_apo_holo[i_real,j_real] = aux
+            # rmsd_apo_holo[j_real,i_real] = aux
+            rmsd_apo_holo[i,j] = aux
+            rmsd_apo_holo[j,i] = aux
 
     np.save(args.output, rmsd_apo_holo)
 
