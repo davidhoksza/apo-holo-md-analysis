@@ -4,7 +4,7 @@ from pymol import cmd
 PROJECTDIR=f"/storage/praha1/home/davidhoksza/projects/apoholo-trj-comp"
 
 PATH_DATA = f"{PROJECTDIR}/data/G01/"
-PATH_OUT = f"{PROJECTDIR}out/"
+PATH_OUT = f"{PROJECTDIR}/out/"
 
 class PATH:
     APO_GRO = f'{PATH_DATA}apo_2FJY/conf_wh20.gro'

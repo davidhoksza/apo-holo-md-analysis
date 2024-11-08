@@ -68,8 +68,7 @@ def main(args):
 
             # rmsd_apo_holo[i_real,j_real] = aux
             # rmsd_apo_holo[j_real,i_real] = aux
-            rmsd_apo_holo[i,j] = aux
-            rmsd_apo_holo[j,i] = aux
+            rmsd_apo_holo[i,j] = aux            
 
     np.save(args.output, rmsd_apo_holo)
 
